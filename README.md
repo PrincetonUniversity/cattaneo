@@ -1,51 +1,34 @@
-# cattaneo — site source for https://pubino.github.io/cattaneo
+# cattaneo 
 
-This repository contains the Jekyll source for the site hosted at https://pubino.github.io/cattaneo.
+Personal site for Prof. Matias Cattaneo.  Updated via HTML, compiled via Jekyll, and served via GitHub Pages.
 
-This README gives concise guidance for someone comfortable editing HTML and GitHub but new to Jekyll/GitHub Pages.
+## Structure
+- Top-level files like `index.html`, `publications.html`, `research.html` correspond to `/`, `/publications/`, and `/research/` respectively. 
+- Each HTML file has YAML front-matter at the top for Jekyll to process.
+- Reusable fragments live in `_includes/`, e.g. header, footer, etc.
+- Page layouts are in `_layouts/`; the site only uses a single layout.
+- Menus are built and controled by the `_data/navigation.yml` file.
+- CSS, JS, and images are grouped under `assets/`.
+- The site is built with Jekyll with a push to the `main` branch and then automatically published via GitHub Pages (live when the green checkmark appears).
+- A Docker-based workflow is provided as a local development option.
 
-## Quick summary
-- Edit site pages: top-level files like `index.html`, `publications.html`, `research.html`, etc. Each file has YAML front-matter at the top.
-- Partials/includes: reusable fragments live in `_includes/` (header, footer, head, scripts).
-- Layouts: page shells are in `_layouts/` (the default layout is `default.html`).
-- Site data: `_data/navigation.yml` controls the main and utility menus.
-- Assets: CSS, JS, and images are under `assets/`.
-- Local dev: a Docker-based workflow is provided; you can also use a Ruby environment if you prefer.
-- Deployment: the site is built with Jekyll and published via GitHub Pages from the `main` branch.
+## Editing the Site
 
----
+Pages are plain HTML.  Edit the HTML as you normally would. The YAML front-matter block at the top of each page are directives to Jekyll and can otherwise be ignored.
 
-## Editing pages and content
-- Pages are plain HTML (or Markdown) with a YAML front-matter block at the top. Example front-matter:
-
-```
----
-layout: default
-title: "Publications"
-permalink: /publications/
-redirect_from:
-  - /publications.html
----
-```
-
-- To edit site navigation, update `_data/navigation.yml`. Use directory-style URLs (ending with a trailing slash), e.g. `/publications/`.
-- Reusable fragments: change `_includes/header.html` or `_includes/footer.html` to edit the global header/footer.
-- Use Liquid helpers for asset/link paths when adding new references:
-  - Prefer `{{ 'assets/js/foo.js' | relative_url }}` or `{{ 'assets/images/logo.svg' | relative_url }}` so Jekyll injects the correct `baseurl` for GitHub Pages.
-
-## Asset conventions
-- Place images under `assets/images/` and reference them with `{{ 'assets/images/your.png' | relative_url }}` or `{{ '/assets/images/your.png' | relative_url }}`.
-- Stylesheets and scripts live under `assets/css/` and `assets/js/` respectively.
+Jekyll will process Liquid syntax for asset/link paths.  When adding new images for example, prefer `{{ 'assets/images/award.jpg' | relative_url }}` so Jekyll injects the correct `baseurl` for GitHub Pages.
 
 ## Base URL and GitHub Pages
-- The site is served from `https://pubino.github.io/cattaneo` (repository site). The production `_config.yml` includes:
+
+The site is served from `https://pubino.github.io/cattaneo`. The production `_config.yml` includes:
 
 ```
 baseurl: "/cattaneo"
 ```
 
-- Local development uses `_config.local.yml` to override `baseurl` and `url` so the site builds and serves from `http://localhost:4000` without `/cattaneo` in the path.
-- When editing templates, prefer `relative_url` so links behave correctly both locally and on GitHub Pages.
+Update the base accordingly.
+
+Note that local development uses `_config.local.yml` to override `baseurl` and `url` so the site builds and serves from `http://localhost:4000` without any appended values in the path.
 
 ## Local development (recommended: Docker)
 A Docker workflow is available so you don't need to install Ruby/Gems locally.
