@@ -1,7 +1,7 @@
 title: "Matias D. Cattaneo"
 description: ""
 url: ""
-baseurl: ""
+baseurl: "/cattaneo"
 markdown: kramdown
 permalink: ":basename:output_ext"
 theme: null
