@@ -4717,6 +4717,7 @@ body.layout-block-padding-large .block-ps-links-list.row-style--grid .field--nam
         position: absolute;
         top: 1.08rem;
         right: 3.5rem;
+        color:white;
         }
     .search-bar button.toggle-searchbar {
         position: absolute;
@@ -4935,7 +4936,6 @@ header .main-menu, header nav, .utility-nav, .utility-nav a, .utility-nav .nav-l
 }
 .utility-nav {
     display: flex;
-    gap: 1rem;
     align-items: baseline;
     margin: 0;
     padding: 0;
