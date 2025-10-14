@@ -6581,6 +6581,7 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
     color: var(--color-neutral-85);
     }
 #header {
+    transition: background 0.1s ease, box-shadow 0.1s ease;
     border-top: 4px solid var(--color-brand-70);
     }
 .header {
@@ -10827,6 +10828,7 @@ body {
     border-bottom-color: var(--bright-light);
     }
 #header {
+    transition: background 0.1s ease, box-shadow 0.1s ease;
     border-top: none;
     }
 #header.stuck {
