@@ -10865,9 +10865,9 @@ body {
     border-top: 6px solid var(--primary-80);
     }
 #footer a.pu-logo {
-    width: 9.0625rem;
+    width: 11rem;
     height: 2.5rem;
-    background-size: 9.0625rem 2.5rem;
+    background-size: 11rem 2.5rem;
     }
 #footer .subfooter-links {
     padding-left: 0.9375rem;
@@ -10883,7 +10883,8 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
 /* Make sure the white stacked PU logo is visible in the subfooter */
 #footer .subfooter a.pu-logo img, #footer .pu-logo img {
     display: block;
-    max-width: 9.0625rem; /* match background-size used for pu-logo */
+    /* max-width: 9.0625rem; match background-size used for pu-logo */
+    max-width: 11rem;
     height: auto;
     filter: none !important; /* avoid accidental inversion/opacity */
 }
