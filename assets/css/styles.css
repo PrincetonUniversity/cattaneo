@@ -6557,9 +6557,6 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
     background-repeat: no-repeat;
     background-size: 186px 56px;
     }
-#footer a.pu-logo img {
-    display: none;
-    }
 #footer a.pu-logo:hover, #footer a.pu-logo:focus {
     opacity: 0.9;
     }
