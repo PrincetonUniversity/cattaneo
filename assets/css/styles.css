@@ -4715,7 +4715,7 @@ body.layout-block-padding-large .block-ps-links-list.row-style--grid .field--nam
 @media (max-width: 61.94rem) {
     .main-menu button.toggle-mobile-menu {
         position: absolute;
-        top: 1.08rem;
+        top: 0.15rem;
         right: 3.5rem;
         color:white;
         }
@@ -4807,6 +4807,7 @@ footer .pu-logo img {
     flex-direction: column;
     }
 .main-container {
+    display:flex;
     flex-grow: 1;
     }
 .constrained .page-container {
@@ -4845,6 +4846,10 @@ body[class*=section-spacing] .node__content {
         flex: 0 0 100%;
         }
     }
+
+.front .block-ps-text {
+    padding-right: 10px;
+}
 .not-front .with-page-title .page-title {
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -4902,6 +4907,32 @@ body[class*=section-spacing] .node__content {
         }
     }
 .flavor2 .header .alt-pu-logo {
+
+body, #page, #main, #content {
+    color: var(--color-black);
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-image: none !important;
+}
+#main {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin-right: 1rem;
+}
+#main * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+#main p, #main div, #main span, #main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+    word-break: break-word;
+    hyphens: auto;
+}
+.princeton-branding, .main-menu, .search-bar, .breadcrumb, .sidebar-first, footer, .share-print-email-links, .block-local-tasks-block, .alert-status, .back-to-top, #ed11y-main-toggle {
+    visibility: hidden;
+    display: none;
+}
     background: url(../../profiles/ps/themes/ps_base/images/pu-shield-white.svg) no-repeat 0 0;
     background-size: contain;
     display: block;
@@ -6604,7 +6635,7 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
     display: none;
     }
 #header.stuck .site-name {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
     }
 #header.stuck .site-logo img {
     max-height: 40px;
@@ -7351,6 +7382,7 @@ body {
         }
     .utility-menu {
         right: 0.5rem;
+        top: 0;
         }
     }
 .content-type-ps-news .ps-title-with-featured-image-3x4 ul li {
@@ -8076,6 +8108,11 @@ body.full-width-search-box.toolbar-horizontal .search-bar .navbar-collapse {
 .site-branding .site-logo {
     padding-bottom: 1rem;
     }
+@media (min-width: 62rem) {
+    .site-branding .container {
+    padding-top: 2rem;
+    }
+}
 @media (min-width: 36rem) {
     .site-branding .site-logo img {
         max-width: 425px;
@@ -8106,7 +8143,6 @@ body.full-width-search-box.toolbar-horizontal .search-bar .navbar-collapse {
         }
     }
 .site-branding .row > div:last-child {
-    padding-bottom: 1rem;
     }
 .stuck .site-branding {
     max-width: calc(100vw - 9rem);
@@ -10865,7 +10901,7 @@ body {
     border-top: 6px solid var(--primary-80);
     }
 #footer a.pu-logo {
-    width: 11rem;
+    width: 16rem;
     height: 2.5rem;
     background-size: 11rem 2.5rem;
     }
@@ -10884,7 +10920,7 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
 #footer .subfooter a.pu-logo img, #footer .pu-logo img {
     display: block;
     /* max-width: 9.0625rem; match background-size used for pu-logo */
-    max-width: 11rem;
+    max-width: 16rem;
     height: auto;
     filter: none !important; /* avoid accidental inversion/opacity */
 }
@@ -11058,6 +11094,9 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
 .header.is-sticky.stuck {
     height: 50px;
     }
+.header.is-sticky.stuck .site-branding .container {
+    padding-top:0;
+}
 .header.is-sticky.stuck .site-info {
     margin-top: 5px;
     }
