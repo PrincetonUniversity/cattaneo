@@ -7295,6 +7295,7 @@ body {
 @media (max-width: 61.9375rem) {
     .header .utility-menu {
         padding-bottom: 1rem;
+        justify-content: flex-start;
         }
     .header .utility-menu a {
         margin: 0;
