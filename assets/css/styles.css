@@ -10872,3 +10872,7 @@ a.no-border:hover {
 .node__content a:hover {
     border-bottom: 1px solid #032a70;
     }
+
+.section-publications li, .section-research li {
+    margin-bottom: 15px;
+}
