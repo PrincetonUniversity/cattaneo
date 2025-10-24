@@ -4648,7 +4648,7 @@ footer .pu-logo img {
         }
     }
 .main-content, .sidebar-first {
-    padding-bottom: 60px;
+    padding-bottom: 15px;
     }
 body[class*=section-spacing] .node__content {
     display: flex;
