@@ -122,76 +122,6 @@ img {
 figure {
     margin: 1em 40px;
     }
-button, input, optgroup, select, textarea {
-    color: inherit;
-    /* 1 */
-    font: inherit;
-    /* 2 */
-    margin: 0;
-    /* 3 */
-    }
-button {
-    overflow: visible;
-    }
-button, select {
-    text-transform: none;
-    }
-button, html input[type="button"], /* 1 */input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button;
-    /* 2 */
-    cursor: pointer;
-    /* 3 */
-    }
-button[disabled], html input[disabled] {
-    cursor: default;
-    }
-button::-moz-focus-inner, input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-    }
-input {
-    line-height: normal;
-    }
-.action-links li {
-    display: inline-block;
-    margin: 0 0.3em;
-    }
-.action-links li:first-child {
-    margin-left: 0;
-    /* LTR */
-    }
-[dir="rtl"] .action-links li:first-child {
-    margin-right: 0;
-    margin-left: 0.3em;
-    }
-.breadcrumb ol {
-    margin: 0;
-    padding: 0;
-    }
-[dir="rtl"] .breadcrumb ol {
-    /* This is required to win over specificity of [dir="rtl"] ol */
-    margin-right: 0;
-    }
-.breadcrumb li {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    }
-.breadcrumb li::before {
-    content: " »";
-    }
-.breadcrumb li:first-child::before {
-    content: none;
-    }
-.button, .image-button {
-    margin-right: 1em;
-    margin-left: 1em;
-    }
-.button:first-child, .image-button:first-child {
-    margin-right: 0;
-    margin-left: 0;
-    }
 .container-inline label::after, .container-inline .label::after {
     content: ":";
     }
@@ -205,54 +135,8 @@ input {
     margin-top: 0;
     margin-bottom: 0;
     }
-.exposed-filters .form-item {
-    margin: 0 0 0.1em 0;
-    padding: 0;
-    }
-.exposed-filters .form-item label {
-    float: left;
-    /* LTR */
-    width: 10em;
-    font-weight: normal;
-    }
-[dir="rtl"] .exposed-filters .form-item label {
-    float: right;
-    }
 .field--label-inline .field__label, .field--label-inline > .field__item, .field--label-inline .field__items {
     padding-right: 0.5em;
-    }
-form .field-multiple-table {
-    margin: 0;
-    }
-form .field-multiple-table .field-multiple-drag {
-    width: 30px;
-    padding-right: 0;
-    /* LTR */
-    }
-[dir="rtl"] form .field-multiple-table .field-multiple-drag {
-    padding-left: 0;
-    }
-form .field-multiple-table .field-multiple-drag .tabledrag-handle {
-    padding-right: 0.5em;
-    /* LTR */
-    }
-[dir="rtl"] form .field-multiple-table .field-multiple-drag .tabledrag-handle {
-    padding-right: 0;
-    padding-left: 0.5em;
-    }
-form .field-add-more-submit {
-    margin: 0.5em 0 0;
-    }
-.form-item, .form-actions {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    }
-tr.odd .form-item, tr.even .form-item {
-    margin-top: 0;
-    margin-bottom: 0;
-    }
-.form-composite > .fieldset-wrapper > .description, .form-item .description {
-    font-size: 0.85em;
     }
 label.option {
     display: inline;
@@ -264,45 +148,6 @@ label.option {
     padding: 0;
     font-size: inherit;
     font-weight: bold;
-    }
-.form-checkboxes .form-item, .form-radios .form-item {
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-    }
-.form-item input.error, .form-item textarea.error, .form-item select.error {
-    border: 2px solid red;
-    }
-.form--inline .form-item {
-    float: left;
-    /* LTR */
-    margin-right: 0.5em;
-    /* LTR */
-    }
-[dir="rtl"] .form--inline .form-item {
-    float: right;
-    margin-right: 0;
-    margin-left: 0.5em;
-    }
-[dir="rtl"] .views-filterable-options-controls .form-item {
-    margin-right: 2%;
-    }
-.form--inline .form-item-separator {
-    margin-top: 2.3em;
-    margin-right: 1em;
-    /* LTR */
-    margin-left: 0.5em;
-    /* LTR */
-    }
-[dir="rtl"] .form--inline .form-item-separator {
-    margin-right: 0.5em;
-    margin-left: 1em;
-    }
-.form--inline .form-actions {
-    clear: left;
-    /* LTR */
-    }
-[dir="rtl"] .form--inline .form-actions {
-    clear: right;
     }
 .item-list .title {
     font-weight: bold;
@@ -4130,16 +3975,17 @@ nav.menu--footer:not(#block-ps-tiger-footer) ul.nav li.nav-item a:hover, nav.men
         margin: 0 1rem 0 0;
         }
     @supports (display: grid) {
-        . content-type-ps-news . related-people--grid . field__items {
+        .content-type-ps-news .related-people--grid .field__items {
             display: grid;
             grid-template-columns: repeat(5, minmax(0, 1fr));
             -ms-grid-columns: repeat(5, minmax(0, 1fr));
             grid-column-gap: 2rem;
-            grid-row-gap: 1rem
-            } . content-type-ps-news . related-people--grid . field__items li {
-            margin: 0
-            }
+            grid-row-gap: 1rem;
         }
+        .content-type-ps-news .related-people--grid .field__items li {
+            margin: 0;
+        }
+    }
     }
 .content-type-ps-news .related-people--list-names .field__items .field__item:after, .content-type-ps-news .related-people--list-names .field__items .field_item:after {
     content: ",";
@@ -4193,16 +4039,17 @@ nav.menu--footer:not(#block-ps-tiger-footer) ul.nav li.nav-item a:hover, nav.men
         margin: 0 1rem 0 0;
         }
     @supports (display: grid) {
-        . content-type-ps-people . related-news--grid ul {
+        .content-type-ps-people .related-news--grid ul {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             -ms-grid-columns: repeat(3, minmax(0, 1fr));
             grid-column-gap: 2rem;
-            grid-row-gap: 1rem
-            } . content-type-ps-people . related-news--grid ul li {
-            margin: 0
-            }
+            grid-row-gap: 1rem;
         }
+        .content-type-ps-people .related-news--grid ul li {
+            margin: 0;
+        }
+    }
     }
 .search-block-form {
     position: relative;
@@ -4519,17 +4366,28 @@ body.with-horizontal-jlm .tabby-panel {
         margin: 0 1rem 0 0;
         }
     @supports (display: grid) {
-        . content-type-ps-events . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items, . content-type-ps-news . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items, . content-type-ps-people . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items, . content-type-ps-post . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items {
+        .content-type-ps-events .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items,
+        .content-type-ps-news .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items,
+        .content-type-ps-people .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items,
+        .content-type-ps-post .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items {
             display: grid;
             grid-template-columns: repeat(5, minmax(0, 1fr));
             -ms-grid-columns: repeat(5, minmax(0, 1fr));
             grid-column-gap: 2rem;
-            grid-row-gap: 1rem
-            } . content-type-ps-events . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items . field__item, . content-type-ps-events . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items li, . content-type-ps-news . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items . field__item, . content-type-ps-news . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items li, . content-type-ps-people . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items . field__item, . content-type-ps-people . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items li, . content-type-ps-post . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items . field__item, . content-type-ps-post . field--type-entity-reference-taxonomy-term . image-and-label-grid . field__items li {
-            flex: none;
-            margin: 0
-            }
+            grid-row-gap: 1rem;
         }
+        .content-type-ps-events .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items .field__item,
+        .content-type-ps-events .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items li,
+        .content-type-ps-news .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items .field__item,
+        .content-type-ps-news .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items li,
+        .content-type-ps-people .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items .field__item,
+        .content-type-ps-people .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items li,
+        .content-type-ps-post .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items .field__item,
+        .content-type-ps-post .field--type-entity-reference-taxonomy-term.image-and-label-grid .field__items li {
+            flex: none;
+            margin: 0;
+        }
+    }
     }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .timeline-feature-entry figure {
@@ -5135,18 +4993,14 @@ a.cke-button-primary:hover, a.cke-button-primary:focus {
     border-color: var(--color-neutral-85);
     }
 a.cke-button-secondary {
-    color: var(--color-neutral-85);
     text-decoration: none;
     padding: 10px 30px;
     font-weight: 700;
     font-size: 0.875rem;
     text-transform: uppercase;
-    border: 1px solid var(--color-action-70);
-    border-radius: var(--btn-border-radius);
-    background-color: rgba(0, 0, 0, 0);
     display: inline-block;
-    margin: 1em 0 0;
     transition: all 0.3s ease;
+    border: 1px solid black;
     }
 a.cke-button-secondary:hover, a.cke-button-secondary:focus {
     color: var(--color-white);
@@ -6540,6 +6394,7 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
     height: 56px;
     background-repeat: no-repeat;
     background-size: 186px 56px;
+    background-image: none;
     }
 #footer a.pu-logo:hover, #footer a.pu-logo:focus {
     opacity: 0.9;
@@ -6603,7 +6458,7 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
     }
 @media (min-width: 62rem) {
     #header.stuck .utility-menu, #header.stuck .search-bar, #header.stuck .site-slogan {
-        border: 0;
+/*        border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
         margin: -1px;
@@ -6611,7 +6466,7 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
         padding: 0;
         width: 1px;
         position: absolute;
-        top: -100vh;
+        top: -100vh; */
         }
     }
 .toolbar-horizontal #header.stuck, .toolbar-horizontal #header.is-sticky {
@@ -7283,28 +7138,6 @@ body {
         padding-left: 0;
         padding-right: 0.5rem;
         }
-    }
-.sidebar-second .main-sidebar-menu ul li a {
-    border-left: 4px solid rgba(0, 0, 0, 0);
-    border-right: none;
-    }
-.sidebar-second .main-sidebar-menu ul li ul {
-    padding-left: 0;
-    }
-.sidebar-second .main-sidebar-menu ul li ul li a {
-    padding-left: 2rem;
-    }
-.sidebar-second .main-sidebar-menu ul li ul ul {
-    padding-left: 0;
-    }
-.sidebar-second .main-sidebar-menu ul li ul ul li a {
-    padding-left: 2.5rem;
-    }
-.sidebar-second .main-sidebar-menu ul li ul ul ul {
-    padding-left: 0;
-    }
-.sidebar-second .main-sidebar-menu ul li ul ul ul li a {
-    padding-left: 2.75rem;
     }
 @media (max-width: 48rem) {
     .sidebar-second .main-sidebar-menu a {
@@ -10970,11 +10803,6 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
     border-color: var(--primary-80);
     color: #121212;
     }
-.background-color-primary-80 .block-background-color-neutral-10 .webform-button--previous:hover, .background-color-primary-80 .block-background-color-neutral-10 .webform-button--previous:focus, .background-color-primary-80 .block-background-color-neutral-10 .webform-button--preview:hover, .background-color-primary-80 .block-background-color-neutral-10 .webform-button--preview:focus, .background-color-primary-80 .block-background-color-neutral-10 .timeline-feature-entry-cta-link a:hover, .background-color-primary-80 .block-background-color-neutral-10 .timeline-feature-entry-cta-link a:focus, .background-color-primary-80 .block-background-color-neutral-10 .ps-content-list-filters a.btn-primary.content-list-reset:hover, .background-color-primary-80 .block-background-color-neutral-10 .ps-content-list-filters a.btn-primary.content-list-reset:focus, .background-color-primary-80 .block-background-color-neutral-10 .block-ps-callout .callout-read-more:hover, .background-color-primary-80 .block-background-color-neutral-10 .block-ps-callout .callout-read-more:focus, .background-color-primary-80 .block-background-color-neutral-10 .billboard a.billboard-read-more:hover, .background-color-primary-80 .block-background-color-neutral-10 .billboard a.billboard-read-more:focus, .background-color-primary-80 .block-background-color-neutral-10 .block-content-list a.view-all-link:hover, .background-color-primary-80 .block-background-color-neutral-10 .block-content-list a.view-all-link:focus, .background-color-primary-80 .block-background-color-neutral-10 a.view-all-link:hover, .background-color-primary-80 .block-background-color-neutral-10 a.view-all-link:focus, .background-color-primary-80 .block-background-color-neutral-10 .button-secondary:hover, .background-color-primary-80 .block-background-color-neutral-10 .button-secondary:focus, .background-color-primary-80 .block-background-color-neutral-10 a.button-secondary:hover, .background-color-primary-80 .block-background-color-neutral-10 a.button-secondary:focus, .background-color-primary-80 .block-background-color-neutral-10 .cke-button-secondary:hover, .background-color-primary-80 .block-background-color-neutral-10 .cke-button-secondary:focus, .background-color-primary-80 .block-background-color-neutral-10 a.cke-button-secondary:hover, .background-color-primary-80 .block-background-color-neutral-10 a.cke-button-secondary:focus, .background-color-primary-80 .block-background-color-white .webform-button--previous:hover, .background-color-primary-80 .block-background-color-white .webform-button--previous:focus, .background-color-primary-80 .block-background-color-white .webform-button--preview:hover, .background-color-primary-80 .block-background-color-white .webform-button--preview:focus, .background-color-primary-80 .block-background-color-white .timeline-feature-entry-cta-link a:hover, .background-color-primary-80 .block-background-color-white .timeline-feature-entry-cta-link a:focus, .background-color-primary-80 .block-background-color-white .ps-content-list-filters a.btn-primary.content-list-reset:hover, .background-color-primary-80 .block-background-color-white .ps-content-list-filters a.btn-primary.content-list-reset:focus, .background-color-primary-80 .block-background-color-white .block-ps-callout .callout-read-more:hover, .background-color-primary-80 .block-background-color-white .block-ps-callout .callout-read-more:focus, .background-color-primary-80 .block-background-color-white .billboard a.billboard-read-more:hover, .background-color-primary-80 .block-background-color-white .billboard a.billboard-read-more:focus, .background-color-primary-80 .block-background-color-white .block-content-list a.view-all-link:hover, .background-color-primary-80 .block-background-color-white .block-content-list a.view-all-link:focus, .background-color-primary-80 .block-background-color-white a.view-all-link:hover, .background-color-primary-80 .block-background-color-white a.view-all-link:focus, .background-color-primary-80 .block-background-color-white .button-secondary:hover, .background-color-primary-80 .block-background-color-white .button-secondary:focus, .background-color-primary-80 .block-background-color-white a.button-secondary:hover, .background-color-primary-80 .block-background-color-white a.button-secondary:focus, .background-color-primary-80 .block-background-color-white .cke-button-secondary:hover, .background-color-primary-80 .block-background-color-white .cke-button-secondary:focus, .background-color-primary-80 .block-background-color-white a.cke-button-secondary:hover, .background-color-primary-80 .block-background-color-white a.cke-button-secondary:focus, .background-color-primary-90 .block-background-color-neutral-10 .webform-button--previous:hover, .background-color-primary-90 .block-background-color-neutral-10 .webform-button--previous:focus, .background-color-primary-90 .block-background-color-neutral-10 .webform-button--preview:hover, .background-color-primary-90 .block-background-color-neutral-10 .webform-button--preview:focus, .background-color-primary-90 .block-background-color-neutral-10 .timeline-feature-entry-cta-link a:hover, .background-color-primary-90 .block-background-color-neutral-10 .timeline-feature-entry-cta-link a:focus, .background-color-primary-90 .block-background-color-neutral-10 .ps-content-list-filters a.btn-primary.content-list-reset:hover, .background-color-primary-90 .block-background-color-neutral-10 .ps-content-list-filters a.btn-primary.content-list-reset:focus, .background-color-primary-90 .block-background-color-neutral-10 .block-ps-callout .callout-read-more:hover, .background-color-primary-90 .block-background-color-neutral-10 .block-ps-callout .callout-read-more:focus, .background-color-primary-90 .block-background-color-neutral-10 .billboard a.billboard-read-more:hover, .background-color-primary-90 .block-background-color-neutral-10 .billboard a.billboard-read-more:focus, .background-color-primary-90 .block-background-color-neutral-10 .block-content-list a.view-all-link:hover, .background-color-primary-90 .block-background-color-neutral-10 .block-content-list a.view-all-link:focus, .background-color-primary-90 .block-background-color-neutral-10 a.view-all-link:hover, .background-color-primary-90 .block-background-color-neutral-10 a.view-all-link:focus, .background-color-primary-90 .block-background-color-neutral-10 .button-secondary:hover, .background-color-primary-90 .block-background-color-neutral-10 .button-secondary:focus, .background-color-primary-90 .block-background-color-neutral-10 a.button-secondary:hover, .background-color-primary-90 .block-background-color-neutral-10 a.button-secondary:focus, .background-color-primary-90 .block-background-color-neutral-10 .cke-button-secondary:hover, .background-color-primary-90 .block-background-color-neutral-10 .cke-button-secondary:focus, .background-color-primary-90 .block-background-color-neutral-10 a.cke-button-secondary:hover, .background-color-primary-90 .block-background-color-neutral-10 a.cke-button-secondary:focus, .background-color-primary-90 .block-background-color-white .webform-button--previous:hover, .background-color-primary-90 .block-background-color-white .webform-button--previous:focus, .background-color-primary-90 .block-background-color-white .webform-button--preview:hover, .background-color-primary-90 .block-background-color-white .webform-button--preview:focus, .background-color-primary-90 .block-background-color-white .timeline-feature-entry-cta-link a:hover, .background-color-primary-90 .block-background-color-white .timeline-feature-entry-cta-link a:focus, .background-color-primary-90 .block-background-color-white .ps-content-list-filters a.btn-primary.content-list-reset:hover, .background-color-primary-90 .block-background-color-white .ps-content-list-filters a.btn-primary.content-list-reset:focus, .background-color-primary-90 .block-background-color-white .block-ps-callout .callout-read-more:hover, .background-color-primary-90 .block-background-color-white .block-ps-callout .callout-read-more:focus, .background-color-primary-90 .block-background-color-white .billboard a.billboard-read-more:hover, .background-color-primary-90 .block-background-color-white .billboard a.billboard-read-more:focus, .background-color-primary-90 .block-background-color-white .block-content-list a.view-all-link:hover, .background-color-primary-90 .block-background-color-white .block-content-list a.view-all-link:focus, .background-color-primary-90 .block-background-color-white a.view-all-link:hover, .background-color-primary-90 .block-background-color-white a.view-all-link:focus, .background-color-primary-90 .block-background-color-white .button-secondary:hover, .background-color-primary-90 .block-background-color-white .button-secondary:focus, .background-color-primary-90 .block-background-color-white a.button-secondary:hover, .background-color-primary-90 .block-background-color-white a.button-secondary:focus, .background-color-primary-90 .block-background-color-white .cke-button-secondary:hover, .background-color-primary-90 .block-background-color-white .cke-button-secondary:focus, .background-color-primary-90 .block-background-color-white a.cke-button-secondary:hover, .background-color-primary-90 .block-background-color-white a.cke-button-secondary:focus, .overlay-dark .block-background-color-neutral-10 .webform-button--previous:hover, .overlay-dark .block-background-color-neutral-10 .webform-button--previous:focus, .overlay-dark .block-background-color-neutral-10 .webform-button--preview:hover, .overlay-dark .block-background-color-neutral-10 .webform-button--preview:focus, .overlay-dark .block-background-color-neutral-10 .timeline-feature-entry-cta-link a:hover, .overlay-dark .block-background-color-neutral-10 .timeline-feature-entry-cta-link a:focus, .overlay-dark .block-background-color-neutral-10 .ps-content-list-filters a.btn-primary.content-list-reset:hover, .overlay-dark .block-background-color-neutral-10 .ps-content-list-filters a.btn-primary.content-list-reset:focus, .overlay-dark .block-background-color-neutral-10 .block-ps-callout .callout-read-more:hover, .overlay-dark .block-background-color-neutral-10 .block-ps-callout .callout-read-more:focus, .overlay-dark .block-background-color-neutral-10 .billboard a.billboard-read-more:hover, .overlay-dark .block-background-color-neutral-10 .billboard a.billboard-read-more:focus, .overlay-dark .block-background-color-neutral-10 .block-content-list a.view-all-link:hover, .overlay-dark .block-background-color-neutral-10 .block-content-list a.view-all-link:focus, .overlay-dark .block-background-color-neutral-10 a.view-all-link:hover, .overlay-dark .block-background-color-neutral-10 a.view-all-link:focus, .overlay-dark .block-background-color-neutral-10 .button-secondary:hover, .overlay-dark .block-background-color-neutral-10 .button-secondary:focus, .overlay-dark .block-background-color-neutral-10 a.button-secondary:hover, .overlay-dark .block-background-color-neutral-10 a.button-secondary:focus, .overlay-dark .block-background-color-neutral-10 .cke-button-secondary:hover, .overlay-dark .block-background-color-neutral-10 .cke-button-secondary:focus, .overlay-dark .block-background-color-neutral-10 a.cke-button-secondary:hover, .overlay-dark .block-background-color-neutral-10 a.cke-button-secondary:focus, .overlay-dark .block-background-color-white .webform-button--previous:hover, .overlay-dark .block-background-color-white .webform-button--previous:focus, .overlay-dark .block-background-color-white .webform-button--preview:hover, .overlay-dark .block-background-color-white .webform-button--preview:focus, .overlay-dark .block-background-color-white .timeline-feature-entry-cta-link a:hover, .overlay-dark .block-background-color-white .timeline-feature-entry-cta-link a:focus, .overlay-dark .block-background-color-white .ps-content-list-filters a.btn-primary.content-list-reset:hover, .overlay-dark .block-background-color-white .ps-content-list-filters a.btn-primary.content-list-reset:focus, .overlay-dark .block-background-color-white .block-ps-callout .callout-read-more:hover, .overlay-dark .block-background-color-white .block-ps-callout .callout-read-more:focus, .overlay-dark .block-background-color-white .billboard a.billboard-read-more:hover, .overlay-dark .block-background-color-white .billboard a.billboard-read-more:focus, .overlay-dark .block-background-color-white .block-content-list a.view-all-link:hover, .overlay-dark .block-background-color-white .block-content-list a.view-all-link:focus, .overlay-dark .block-background-color-white a.view-all-link:hover, .overlay-dark .block-background-color-white a.view-all-link:focus, .overlay-dark .block-background-color-white .button-secondary:hover, .overlay-dark .block-background-color-white .button-secondary:focus, .overlay-dark .block-background-color-white a.button-secondary:hover, .overlay-dark .block-background-color-white a.button-secondary:focus, .overlay-dark .block-background-color-white .cke-button-secondary:hover, .overlay-dark .block-background-color-white .cke-button-secondary:focus, .overlay-dark .block-background-color-white a.cke-button-secondary:hover, .overlay-dark .block-background-color-white a.cke-button-secondary:focus {
-    background-color: var(--primary-80);
-    border-color: var(--primary-80);
-    color: #fff;
-    }
 .background-color-primary-80 .block-background-color-neutral-10 .content-list-item-bottom .field--type-entity-reference a, .background-color-primary-80 .block-background-color-white .content-list-item-bottom .field--type-entity-reference a, .background-color-primary-90 .block-background-color-neutral-10 .content-list-item-bottom .field--type-entity-reference a, .background-color-primary-90 .block-background-color-white .content-list-item-bottom .field--type-entity-reference a, .overlay-dark .block-background-color-neutral-10 .content-list-item-bottom .field--type-entity-reference a, .overlay-dark .block-background-color-white .content-list-item-bottom .field--type-entity-reference a {
     color: var(--primary-80);
     }
@@ -11015,16 +10843,16 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
         }
     }
 .header.is-sticky.stuck {
-    height: 50px;
+    /* height: 50px; */
     }
 .header.is-sticky.stuck .site-branding .container {
-    padding-top:0;
+    /* padding-top:0; */
 }
 .header.is-sticky.stuck .site-info {
     margin-top: 5px;
     }
 #header.stuck .nav.main {
-    top: 0;
+    /* top: 0; */
     }
 .main-content {
     margin-top: 1.75rem;
@@ -11041,10 +10869,6 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
     justify-content: center;
     margin-left: 10px;
     }
-.node a {
-    border-bottom: none;
-    color: #032a70;
-    }
 a.no-border:hover {
     border-bottom: none !important;
     }
@@ -11053,18 +10877,4 @@ a.no-border:hover {
     }
 .node__content a:hover {
     border-bottom: 1px solid #032a70;
-    }
-.block-inline-blockps-text .cke-button-secondary {
-    border-bottom: 1px solid black;
-    }
-svg.ext, .block-page-title-block, .link-purpose-external .link-purpose-icon, .link-purpose-icon.link-purpose-document-icon {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: auto;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
     }
