@@ -10878,3 +10878,8 @@ a.no-border:hover {
 .node__content a:hover {
     border-bottom: 1px solid #032a70;
     }
+
+.site-info {
+/* This is my name at the top */
+  padding-top: 35px;
+}
