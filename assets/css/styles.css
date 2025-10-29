@@ -1,3 +1,5 @@
+/* Styles retained to maintain compatibility with existing Princeton Site Builder classes. */
+
 @import url(https://use.typekit.net/ozr7oya.css);
 @import url(https://use.typekit.net/xxx7asp.css);
 @import url(https://use.typekit.net/bok5fgz.css);
@@ -1382,8 +1384,6 @@ a.btn.disabled, fieldset:disabled a.btn {
         position: absolute;
         }
     .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
         }
     .navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {
         -ms-flex-wrap: nowrap;
@@ -4505,9 +4505,6 @@ body.layout-block-padding-large .block-ps-links-list.row-style--grid .field--nam
 .block-ps-people-list .content-list-slider .field--name-title a {
     padding-bottom: 0.438rem;
     }
-.header .header-container {
-    position: relative;
-    }
 .princeton-branding .container {
     padding: 1.25rem 0;
     }
@@ -4566,9 +4563,6 @@ body.layout-block-padding-large .block-ps-links-list.row-style--grid .field--nam
         display: none;
         }
     .utility-menu {
-        position: absolute;
-        top: 1rem;
-        right: 215px;
         }
     .search-block-form {
         position: absolute;
@@ -6431,14 +6425,8 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
     z-index: 100;
     }
 #header.stuck {
-    background: var(--color-white);
-    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.21);
     }
 #header.stuck .site-branding {
-    padding-bottom: 0.25rem;
-    }
-#header.stuck .princeton-branding {
-    display: none;
     }
 #header.stuck .site-name {
     font-size: 1.875rem;
@@ -6450,7 +6438,6 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
     top: 0;
     }
 #header.stuck button.toggle-searchbar {
-    top: 10px;
     }
 #header.stuck .nav.main {
     padding-top: 0;
@@ -6873,7 +6860,6 @@ body {
     }
 @media (min-width: 62rem) {
     .menu1 .header ul.main > li, .menu2 .header ul.main > li, .menu4 .header ul.main > li, .menu6 .header ul.main > li {
-        margin: 0 10px;
         }
     .menu1 .header ul.main > li > a, .menu1 .header ul.main > li > span, .menu2 .header ul.main > li > a, .menu2 .header ul.main > li > span, .menu4 .header ul.main > li > a, .menu4 .header ul.main > li > span, .menu6 .header ul.main > li > a, .menu6 .header ul.main > li > span {
         padding-bottom: 15px;
@@ -7148,8 +7134,6 @@ body {
 .utility-menu a {
     font-weight: 500;
     font-size: 0.85rem;
-    padding: 0.5rem 0 0 0;
-    margin: 0 0.75rem;
     }
 .utility-menu a:hover, .utility-menu a:focus {
     border-bottom: 1px solid var(--color-action-70);
@@ -7165,7 +7149,6 @@ body {
         display: none;
         }
     .utility-menu {
-        right: 0.5rem;
         top: 0;
         }
     }
@@ -8809,9 +8792,6 @@ button.load-more:hover:after, button.load-more:focus:after {
         background-color: var(--color-neutral-100);
         }
     .flavor2.menu1 .header .main-menu {
-        background: var(--color-neutral-85);
-        margin-left: calc(50% - 50vw);
-        margin-right: calc(50% - 50vw);
         }
     }
 @media (min-width: 62rem) {
@@ -8994,7 +8974,6 @@ a:link, a:visited {
     color: #121212;
     }
 .utility-menu a:hover, .utility-menu a:focus {
-    border-bottom: 1px solid currentColor;
     }
 .content-list-item .field--name-title a {
     border-bottom-color: rgba(0, 0, 0, 0);
@@ -9359,8 +9338,6 @@ h1.page-title.page-title--secondary:after {
     }
 @media (min-width: 62rem) {
     .menu1.menu-logo--inline .navbar-expand-lg .navbar-nav.main {
-        position: absolute;
-        bottom: 0;
         }
     .menu1 .header ul.main > .expanded:hover > span, .menu1 .header ul.main > .expanded.open > span, .menu1 .header ul.main > .expanded.active > span, .menu2 .header ul.main > .expanded:hover > span, .menu2 .header ul.main > .expanded.open > span, .menu2 .header ul.main > .expanded.active > span, .menu4 .header ul.main > .expanded:hover > span, .menu4 .header ul.main > .expanded.open > span, .menu4 .header ul.main > .expanded.active > span, .menu6 .header ul.main > .expanded:hover > span, .menu6 .header ul.main > .expanded.open > span, .menu6 .header ul.main > .expanded.active > span {
         box-shadow: inset 0 -6px var(--primary-80);
@@ -9576,7 +9553,6 @@ body.fontset.menu3 .header .main-menu ul.main > li > a, body.fontset.menu4 .head
         box-shadow: none;
         }
     .menu-logo--inline .header-container .navbar-nav.main {
-        max-width: calc(60% - 10px);
         }
     .flavor2.menu1 .header ul.main > .expanded:hover > span, .flavor2.menu1 .header ul.main > .expanded.open > span, .flavor2.menu1 .header ul.main > .expanded.active > span, .flavor2.menu2 .header ul.main > .expanded:hover > span, .flavor2.menu2 .header ul.main > .expanded.open > span, .flavor2.menu2 .header ul.main > .expanded.active > span, .flavor2.menu4 .header ul.main > .expanded:hover > span, .flavor2.menu4 .header ul.main > .expanded.open > span, .flavor2.menu4 .header ul.main > .expanded.active > span, .flavor2.menu6 .header ul.main > .expanded:hover > span, .flavor2.menu6 .header ul.main > .expanded.open > span, .flavor2.menu6 .header ul.main > .expanded.active > span {
         box-shadow: inset 0 -6px var(--bright-light);
@@ -9662,7 +9638,6 @@ body.fontset.menu3 .header .main-menu ul.main > li > a, body.fontset.menu4 .head
     }
 @media (min-width: 62rem) {
     .menu-logo--inline .site-branding .site-info {
-        max-width: calc(35% - 10px);
         }
     .site-branding {
         min-height: 5.3125rem;
@@ -10839,20 +10814,7 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
     }
 @media (min-width: 62rem) {
     .menu-logo--inline .header-container .navbar-nav.main {
-        max-width: calc(80% - 10px);
         }
-    }
-.header.is-sticky.stuck {
-    /* height: 50px; */
-    }
-.header.is-sticky.stuck .site-branding .container {
-    /* padding-top:0; */
-}
-.header.is-sticky.stuck .site-info {
-    margin-top: 5px;
-    }
-#header.stuck .nav.main {
-    /* top: 0; */
     }
 .main-content {
     margin-top: 1.75rem;
@@ -10879,7 +10841,3 @@ a.no-border:hover {
     border-bottom: 1px solid #032a70;
     }
 
-.site-info {
-/* This is my name at the top */
-  padding-top: 35px;
-}
