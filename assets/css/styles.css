@@ -9517,9 +9517,6 @@ body.fontset.menu3 .header .main-menu ul.main > li > a, body.fontset.menu4 .head
     line-height: 1.75rem;
     font-weight: 600;
     }
-.menu1 .site-branding, .menu6 .site-branding {
-    border-bottom: 1px solid var(--neutral-10);
-    }
 .menu1.flavor2 .site-branding, .menu6.flavor2 .site-branding {
     border-color: var(--primary-80);
     }
