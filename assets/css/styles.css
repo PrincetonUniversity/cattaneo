@@ -4,20 +4,6 @@
 @import url(https://use.typekit.net/xxx7asp.css);
 @import url(https://use.typekit.net/bok5fgz.css);
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
-.text-align-center {
-    text-align: center;
-    }
-.align-center {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    }
-.container-inline div, .container-inline label {
-    display: inline;
-    }
-.container-inline .details-wrapper {
-    display: block;
-    }
 .clearfix:after {
     display: table;
     clear: both;
@@ -41,26 +27,7 @@
     width: auto;
     height: auto;
     }
-.item-list__comma-list, .item-list__comma-list li {
-    display: inline;
-    }
-.item-list__comma-list li:after {
-    content: ", ";
-    }
-.item-list__comma-list li:last-child:after {
-    content: "";
-    }
-.caption .media .field, .caption .media .field * {
-    float: none;
-    margin: unset;
-    }
-.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
-    list-style: none;
-    }
 
-#ps-current-username {
-    display: none;
-    }
 .layout--threecol-33-34-33 > .layout-inner-container {
     display: flex;
     flex-wrap: wrap;

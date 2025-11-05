@@ -1,9 +1,18 @@
 /* Styles added to facilitate a move from Princeton Site Builder to Github */
 
+@media (max-width: 61.94rem) {
+/* Adjust padding for mobile menu toggle in specific fontsets */  
+  .fontset1 .toggle-mobile-menu, .fontset3 .toggle-mobile-menu, .fontset4 .toggle-mobile-menu {
+    padding-right: 14px;
+  }
+}
 
-.layout-block-padding-medium .layout .layout__region:not(:only-child) {
+
+@media(min-width: 640px) {
+  .layout-block-padding-medium .layout .layout__region:not(:only-child) {
   /* Margin between the left sidebar and main content on wide screens */
-  margin-right: 20px;
+    margin-right: 20px;
+  }
 }
 
 :root {

@@ -9,8 +9,9 @@ RUN apt-get update && \
 WORKDIR /srv/jekyll
 
 COPY Gemfile* ./
-RUN bundle config set path vendor/bundle
-RUN bundle install
+ENV BUNDLE_PATH=/usr/local/bundle
+RUN bundle config set path "$BUNDLE_PATH" && \
+    bundle install
 
 COPY . .
 

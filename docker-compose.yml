@@ -1,6 +1,7 @@
 services:
   jekyll:
-    image: ruby:3.2-slim
+    build:
+      context: .
     ports:
       - "4040:4000"
     volumes:
@@ -9,7 +10,6 @@ services:
     working_dir: /srv/jekyll
     command: >
       bash -c "
-        apt-get update && apt-get install -y nodejs git build-essential &&
         bundle install &&
         bundle exec jekyll serve --host 0.0.0.0 --watch --livereload --config '_config.yml,_config.local.yml'
       "
