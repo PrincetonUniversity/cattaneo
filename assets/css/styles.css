@@ -4876,6 +4876,9 @@ h2:after {
     background-color: var(--color-brand-70);
     margin-top: 2px;
     }
+.text-align-center {
+    text-align: center;
+}
 h2.text-align-center:after {
     margin-left: auto;
     margin-right: auto;
@@ -10260,8 +10263,6 @@ header nav a, header .main-menu .nav-link, header .utility-nav a, .utility-nav .
 }
 .flavor2 #footer {
     background: var(--primary-100);
-    }
-.flavor2 #footer .subfooter {
     }
 @media (min-width: 62rem) {
     .menu-logo--inline .header-container .navbar-nav.main {
