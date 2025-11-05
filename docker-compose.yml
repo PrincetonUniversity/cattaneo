@@ -2,7 +2,7 @@ services:
   jekyll:
     image: ruby:3.2-slim
     ports:
-      - "4000:4000"
+      - "4040:4000"
     volumes:
       - .:/srv/jekyll:Z
       - bundle_cache:/usr/local/bundle
