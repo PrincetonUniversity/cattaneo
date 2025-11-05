@@ -95,6 +95,11 @@
     font-weight: 700;
   }
   
+.text-align-center {
+  /* Centers text within the element */
+    text-align: center;
+  }
+
   /* Don't underline the main site title on hover */
   .site-name a:hover,
   .site-name a:focus {
