@@ -1,6 +1,29 @@
 /* Styles added to facilitate a move from Princeton Site Builder to Github */
 
 
+.layout-block-padding-medium .layout .layout__region:not(:only-child) {
+  /* Margin between the left sidebar and main content on wide screens */
+  margin-right: 20px;
+}
+
+:root {
+  /* Adjustable site gutters for key layout sections */
+  --layout-max-width: 1520px;
+  --layout-side-gutter: 20px;
+}
+
+/* Maintain full-width regions while keeping inner content off edges */
+#header,
+#main,
+#footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: max(
+    var(--layout-side-gutter),
+    calc((100vw - var(--layout-max-width)) / 2)
+  );
+}
+
 /* Main link color */
 .node a {
   color: rgb(3, 42, 112);
@@ -58,10 +81,6 @@
     align-items: flex-end;
   }
 
-  /* Req 5: Site Info (Bottom-Left) */
-  .site-info {
-  }
-
   .site-name a {
     font-size: 1.75rem;
     font-weight: 700;
@@ -95,11 +114,6 @@
     align-items: flex-end;
   }
 
-  /* Req 7: Main Menu (Bottom-Right) */
-  .main-menu ul.main {
-    /* 'column-reverse' places this on the bottom */
-  }
-
   /* 3. Ensure the *items inside* each menu are horizontal */
   .main-menu ul.nav,
   .utility-menu ul.nav {
@@ -109,11 +123,6 @@
     margin: 0;
     padding: 0;
     gap: 1rem; 
-  }
-
-  /* Space out the individual menu items */
-  .main-menu ul.nav > li,
-  .utility-menu ul.nav > li {
   }
 
 }

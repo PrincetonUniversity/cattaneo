@@ -102,7 +102,7 @@ html {
 body {
     margin: 0;
     }
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article, aside, details, figcaption, figure, hgroup, main, menu, nav, section, summary {
     display: block;
     }
 a {
@@ -258,7 +258,7 @@ html {
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
     }
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, hgroup, main, nav, section {
     display: block;
     }
 body {
@@ -1761,12 +1761,6 @@ a.text-dark:focus, a.text-dark:hover {
 .fa-ul > li {
     position: relative;
     }
-.fa-bars {
-    --fa: "";
-    }
-.fa-search {
-    --fa: "";
-    }
 .sr-only, .fa-sr-only {
     position: absolute;
     width: 1px;
@@ -2474,7 +2468,6 @@ button.unbutton {
         width: calc(16.666666% - 0.83333rem);
         }
     .layout-block-padding-medium .layout .layout__region:not(:only-child) {
-        margin-right: 2.5rem;
         }
     .layout-block-padding-medium .layout .layout__region:not(:only-child) + .layout__region:last-child {
         margin-right: 0;
@@ -4437,7 +4430,7 @@ body.layout-block-padding-large .block-ps-links-list.row-style--grid .field--nam
     .main-menu button.toggle-mobile-menu {
         position: absolute;
         top: 0.15rem;
-        right: 3.5rem;
+        right: 0rem;
         color:white;
         }
     .search-bar button.toggle-searchbar {
@@ -4446,10 +4439,6 @@ body.layout-block-padding-large .block-ps-links-list.row-style--grid .field--nam
         right: 1rem;
         }
     .navbar-collapse {
-        position: absolute;
-        left: 0;
-        top: 4rem;
-        background: var(--color-white);
         width: 100%;
         z-index: 1000;
         }
@@ -4565,9 +4554,7 @@ body[class*=section-spacing] .node__content {
         }
     }
 
-.front .block-ps-text {
-    padding-right: 10px;
-}
+
 .not-front .with-page-title .page-title {
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -4636,6 +4623,7 @@ body, #page, #main, #content {
     overflow-wrap: break-word;
     hyphens: auto;
     margin-right: 1rem;
+    justify-content: center;
 }
 #main * {
     word-wrap: break-word;
@@ -4721,6 +4709,8 @@ header .main-menu, header nav, .utility-nav, .utility-nav a, .utility-nav .nav-l
 .flavor2 #footer {
     background-color: var(--color-neutral-100);
     padding: 15px;
+    display: flex;
+    justify-content: center;
     }
 .flavor2 #footer .subfooter {
     border-top-color: var(--color-neutral-85);
@@ -6316,6 +6306,8 @@ a.add-to-calendar-link--google:hover, a.add-to-calendar-link--google:focus {
 #header {
     transition: background 0.1s ease, box-shadow 0.1s ease;
     border-top: 4px solid var(--color-brand-70);
+    display: flex;
+    justify-content: center;
     }
 .header {
     background: var(--color-white);
@@ -9525,7 +9517,6 @@ body.fontset.menu3 .header .main-menu ul.main > li > a, body.fontset.menu4 .head
     }
 @media (max-width: 48rem) {
     #header.stuck {
-        padding-top: 15px;
         }
     #header.stuck .site-name {
         line-height: 1.1em;
