@@ -1,3 +1,7 @@
+* {
+  font-family: sofia-pro, sans-serif;
+}
+
 #header, #main, #footer {
   padding-inline: 25px;
 }
@@ -92,14 +96,14 @@
     align-items: flex-end;
   }
 
-  .site-name a {
-    font-size: 1.75rem;
+  header h1 a {
+    font-size: 2.875rem;
     font-weight: 700;
   }
   
   /* Don't underline the main site title on hover */
-  .site-name a:hover,
-  .site-name a:focus {
+  header h1 a:hover,
+  header h1 a:focus {
     color: #fff;
     text-decoration: none;
   }

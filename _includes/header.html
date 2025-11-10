@@ -1,32 +1,20 @@
-<header role="banner" class="header" id="header">
-      <h1 class="sr-only sr-site-name">{{ site.title }}</h1>
-      <div class="header-container container">
-        <div class="site-name">
-          <a href="{{ '/' | relative_url }}" title="Home" rel="home">{{ site.title }}</a>
-        </div>
-            
-        <div id="menu-container" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav main" role="list">
-          {% assign current_path = page.url | default: page.permalink %}
-          {% for item in site.data.navigation.main %}
-          <li class="nav-item{% if current_path == item.url %} active{% endif %}">
-           <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-           </li>
-          {% endfor %}
-           </ul>
-        
-
-        <div class="utility-menu">
-           <ul class="nav navbar-nav utility-nav">
-           {% for item in site.data.navigation.utility %}
-            <li class="nav-item">
-              <a href="{{ item.url }}" class="nav-link utility-link"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
-            </li>
-           {% endfor %}
-            </ul>
-        </div>
-        </nav>
-
-
-      </div>
-    </header>
+<header role="banner" id="header">
+  <h1><a href="{{ '/' | relative_url }}" title="Home" rel="home">{{ site.title }}</a></h1>
+  <nav aria-label="site">
+    <ul role="list" class="main-menu">
+    {% assign current_path = page.url | default: page.permalink %}
+    {% for item in site.data.navigation.main %}
+    <li>
+      <a href="{{ item.url | relative_url }}"{% if current_path == item.url or current_path == item.url | append: 'index.html' %} class="active"{% endif %}>{{ item.title }}</a>
+    </li>
+    {% endfor %}
+    </ul>
+    <ul class="utility-menu">
+    {% for item in site.data.navigation.utility %}
+    <li>
+      <a href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
+    </li>
+    {% endfor %}
+    </ul>
+  </nav>
+</header>
